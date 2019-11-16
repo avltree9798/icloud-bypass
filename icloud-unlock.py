@@ -1,6 +1,7 @@
 """
-iCloud Locked Phone bypass PoC
-you need to get the SSH server on your iDevice running first
+iCloud Locked Phone bypass PoC.
+You'll need to get the SSH server on your iDevice running first.
+This script is for security research purposes only.
 """
 import subprocess
 import paramiko
