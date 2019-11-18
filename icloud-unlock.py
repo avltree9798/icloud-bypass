@@ -6,7 +6,7 @@ This script is for security research purposes only.
 import subprocess
 import paramiko
 
-RPORT = 22
+RPORT = 44
 LPORT = 2222
 password = "alpine"
 
