@@ -38,4 +38,3 @@ print("Restarting your device")
 ssh.exec_command("reboot")
 iproxy.terminate()
 iproxy.kill()
-"""
