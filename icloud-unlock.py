@@ -1,7 +1,6 @@
 """
-iCloud Locked Phone bypass PoC.
-You'll need to get the SSH server on your iDevice running first.
-This script is for security research purposes only.
+iCloud Locked Phone bypass PoC
+you need to get the SSH server on your iDevice running first
 """
 import subprocess
 import paramiko
@@ -10,7 +9,7 @@ RPORT = 44
 LPORT = 2222
 password = "alpine"
 
-iproxy = subprocess.Popen(["iproxy", str(LPORT), RPORT], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+iproxy = subprocess.Popen(["iproxy", str(LPORT), str(RPORT)], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 print("Initiating SSH connection")
@@ -39,3 +38,4 @@ print("Restarting your device")
 ssh.exec_command("reboot")
 iproxy.terminate()
 iproxy.kill()
+"""
